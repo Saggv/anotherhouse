@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {IncreateNotificationMessage} from "../Action/User";
 import ScrollToBottom from 'react-scroll-to-bottom';
 import io from "socket.io-client";
-const socket = io();
+const socket = io("https://asangvivi.herokuapp.com");
 export const CreateRoomChat=(data)=>{
     socket.emit("create-room", data);
 }
