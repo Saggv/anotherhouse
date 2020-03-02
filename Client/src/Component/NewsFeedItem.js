@@ -50,12 +50,12 @@ function NewsFeedItem({item}){
         dispatch(PostNewdfeedComment({contentComment,id, toUser}))
         setContentComment("");
     }
+
     const ClickViewMore =()=>{
               setHideContent(description);
               setViewMore("The end")
           
     }
-    // useEffect(scrollToBottom, [commment]);
     return(
         <div className="newsfeeditem">
             <div className="newsfeeditem__content">

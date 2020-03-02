@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontaweso
 import {faMale, faMapMarkerAlt} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 function Room({data}){
       const {address, images, price, description, typeOfRoom, id} = data;
+      
     return(
         <div className="room">
             <Link to={`/room/.${typeOfRoom}.${id}.room`} className="room__link">
