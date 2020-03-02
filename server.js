@@ -49,9 +49,6 @@ app.use((req, res, next) => {
     next();
 });
 app.use(isAuth);
-app.get("/", (req, res)=>{
-    res.render("trangchu");
-});
 // UPLOAD FILE
 const fileStorage = multer.diskStorage({
     destination:(req, file, cb)=>{
