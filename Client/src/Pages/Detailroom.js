@@ -1,12 +1,12 @@
-import React, {Fragment, useEffect, useState} from "react";
-import {Link, useRouteMatch} from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookMessenger} from '@fortawesome/free-brands-svg-icons';
-import {faChevronCircleLeft, faCheckCircle, faMale} from '@fortawesome/free-solid-svg-icons';
+import React, {Fragment, useEffect, useState} from "../../node_modules/@types/react";
+import {Link, useRouteMatch} from "../../node_modules/react-router-dom";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faFacebookMessenger} from '../../node_modules/@fortawesome/free-brands-svg-icons';
+import {faChevronCircleLeft, faCheckCircle, faMale} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 import MyMap from "../Component/MyMap";
 import Pagination from "../Component/Pagination";
 import Footer from "../Component/Footer";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector} from "../../node_modules/react-redux/lib";
 import {FetchDetailRoom} from "../Action/Room";
 function Detailroom(){
     const {dataDetailRoom} = useSelector(state=>state.Room);

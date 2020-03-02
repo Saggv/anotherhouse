@@ -1,5 +1,5 @@
-import React, {useEffect, Fragment} from "react";
-import {useSelector} from "react-redux";
+import React, {useEffect, Fragment} from "../../node_modules/@types/react";
+import {useSelector} from "../../node_modules/react-redux/lib";
 import { FetchNewsfeedUserNow } from "../Action/User";
 import NewsfeedItem from "./NewsFeedItem";
 function NewsfeedProfile(){

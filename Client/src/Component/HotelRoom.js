@@ -1,6 +1,6 @@
-import React from "react";
+import React from "../../node_modules/@types/react";
 import Room from "./Room";
-import {useSelector} from "react-redux";
+import {useSelector} from "../../node_modules/react-redux/lib";
 function HotelRoom(){
     const {RoomData} = useSelector(state=>state.Room);
     return(

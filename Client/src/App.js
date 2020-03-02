@@ -1,12 +1,12 @@
-import React from 'react';
+import React from '../node_modules/@types/react';
 import './App.scss';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "../node_modules/react-router-dom";
 import Navigation from './Component/Navigation';
 import NewsFeed from './Pages/NewsFeed';
 import MotelRoom from './Pages/Motelroom';
 import Profile from "./Pages/Profile";
 import OtherPrifile from "./Pages/OtherProfile";
-import {Provider} from "react-redux";
+import {Provider} from "../node_modules/react-redux/lib";
 import configStore from "./Redux/ConfigStore";
 import Detailroom from "./Pages/Detailroom";
 

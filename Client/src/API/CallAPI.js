@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../node_modules/axios";
 
 export const CallAPI=async(query={},token)=>{
    const result = await axios.post("/graphql",JSON.stringify(query),{

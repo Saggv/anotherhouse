@@ -1,5 +1,5 @@
-import React, {Fragment} from "react";
-import {NavLink} from "react-router-dom";
+import React, {Fragment} from "../../node_modules/@types/react";
+import {NavLink} from "../../node_modules/react-router-dom";
 
 function Comment({item}){
     const {userComment, dateComment, contentComment} = item;

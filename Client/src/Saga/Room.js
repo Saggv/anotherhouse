@@ -1,5 +1,5 @@
 import *as ActionRoom from "../Action/Room";
-import {call, put, select} from "redux-saga/effects";
+import {call, put, select} from "../../node_modules/redux-saga/effects";
 import {CallAPI} from "../API/CallAPI";
 export function* WatchFetchRoom(){
        const {typeFetch} = yield select(state=>state.Room);

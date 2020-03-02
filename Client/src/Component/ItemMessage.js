@@ -1,10 +1,10 @@
-import React, {useState, useEffect, Fragment} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes} from '@fortawesome/free-solid-svg-icons';
+import React, {useState, useEffect, Fragment} from "../../node_modules/@types/react";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faTimes} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 import {CloseMessageItem} from "../Action/MessageSocket";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector} from "../../node_modules/react-redux/lib";
 import {IncreateNotificationMessage} from "../Action/User";
-import ScrollToBottom from 'react-scroll-to-bottom';
+import ScrollToBottom from '../../node_modules/react-scroll-to-bottom/lib';
 import io from "socket.io-client";
 const socket = io();
 export const CreateRoomChat=(data)=>{

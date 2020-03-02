@@ -1,4 +1,4 @@
-import { call, put, select} from "redux-saga/effects";
+import { call, put, select} from "../../node_modules/redux-saga/effects";
 import {CallAPI} from "../API/CallAPI";
 import * as UserAction from "../Action/User";
 export function* WatchLogin(){

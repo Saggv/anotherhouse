@@ -1,8 +1,8 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell} from '@fortawesome/free-solid-svg-icons';
-import {useSelector, useDispatch} from "react-redux";
-import {NavLink} from "react-router-dom";
+import React from "../../node_modules/@types/react";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faBell} from '../../node_modules/@fortawesome/free-solid-svg-icons';
+import {useSelector, useDispatch} from "../../node_modules/react-redux/lib";
+import {NavLink} from "../../node_modules/react-router-dom";
 import {ToggleOpenNotificationClose} from "../Action/User";
 function NotificationNav(){
     const {Notification, user} = useSelector(state=>state.User);

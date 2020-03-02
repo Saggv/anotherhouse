@@ -1,4 +1,4 @@
-import React from "react";
+import React from "../../node_modules/@types/react";
 import roomimg from "../Images/roomimage.jpg";
 function Itembook(){
     return(

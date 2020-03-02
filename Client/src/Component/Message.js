@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookMessenger} from '@fortawesome/free-brands-svg-icons';
-import {useDispatch, useSelector} from "react-redux";
+import React, {useEffect} from "../../node_modules/@types/react";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faFacebookMessenger} from '../../node_modules/@fortawesome/free-brands-svg-icons';
+import {useDispatch, useSelector} from "../../node_modules/react-redux/lib";
 import { FetchMyMessage, OpenMessageItem } from "../Action/MessageSocket";
 import { CreateRoomChat } from "./ItemMessage";
 import {ToggleOpenMessageClose} from "../Action/User";

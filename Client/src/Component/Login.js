@@ -1,9 +1,9 @@
-import React,{useState} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram,faGoogle} from '@fortawesome/free-brands-svg-icons';
-import { faTimes} from '@fortawesome/free-solid-svg-icons';
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import React,{useState} from "../../node_modules/@types/react";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram,faGoogle} from '../../node_modules/@fortawesome/free-brands-svg-icons';
+import { faTimes} from '../../node_modules/@fortawesome/free-solid-svg-icons';
+import {Link} from "../../node_modules/react-router-dom";
+import {useDispatch, useSelector} from "../../node_modules/react-redux/lib";
 import {LoginAction, CloseLogin, SignUpAction} from "../Action/User";
 import {ClearError} from "../Action/Error";
 function Login(){

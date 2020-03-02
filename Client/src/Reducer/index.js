@@ -1,4 +1,4 @@
-import {combineReducers} from "redux";
+import {combineReducers} from "../../node_modules/redux";
 import User from "./User";
 import NewsfeedReducer from "./Newsfeed";
 import Messager from "./Messager";

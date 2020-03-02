@@ -1,7 +1,7 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCheckCircle, faGlobeAsia} from '@fortawesome/free-solid-svg-icons';
-import {Link} from "react-router-dom";
+import React from "../../node_modules/@types/react";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import {faCheckCircle, faGlobeAsia} from '../../node_modules/@fortawesome/free-solid-svg-icons';
+import {Link} from "../../node_modules/react-router-dom";
 
 function CTA(){
     return(

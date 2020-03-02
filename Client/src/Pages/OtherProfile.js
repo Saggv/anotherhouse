@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from "../../node_modules/@types/react";
 import ProfileUser from "../Component/ProfileUser";
-import {useRouteMatch} from "react-router-dom";
-import {useSelector, useDispatch} from "react-redux";
+import {useRouteMatch} from "../../node_modules/react-router-dom";
+import {useSelector, useDispatch} from "../../node_modules/react-redux/lib";
 import NewsfeedOtherProfile from "../Component/NewsfeedOtherProfile";
 import { FetchAnotherProfile } from "../Action/User";
 import { FetchAnotherNewsfeed } from "../Action/Newsfeed";

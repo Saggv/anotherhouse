@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from "../../node_modules/@types/react";
 import {PostUpdateProfileUser} from "../Action/User";
-import {useDispatch} from "react-redux";
+import {useDispatch} from "../../node_modules/react-redux/lib";
 function EditProfileInfor({data}){
     const {name, quote, username} = data;
     const [updateUserName, setUpdateUserName] = useState("");

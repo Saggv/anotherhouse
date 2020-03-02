@@ -1,16 +1,16 @@
-import React,{useState, useEffect} from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComment,  faGlobeAsia} from '@fortawesome/free-solid-svg-icons';
-import ScrollToBottom from 'react-scroll-to-bottom';
+import React,{useState, useEffect} from "../../node_modules/@types/react";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faComment,  faGlobeAsia} from '../../node_modules/@fortawesome/free-solid-svg-icons';
+import ScrollToBottom from '../../node_modules/react-scroll-to-bottom/lib';
 import Like from "../Images/Like.svg";
 import NLike from "../Images/NLike.svg";
 import UnLike from "../Images/UnLike.svg";
 import NUnLike from "../Images/NUnLike.svg";
-import {Link} from "react-router-dom";
+import {Link} from "../../node_modules/react-router-dom";
 import Comment from "./Comment";
 import {LikeNewsfeed, PostNewdfeedComment, DislikeNewsfeed} from "../Action/Newsfeed";
-import {useDispatch, useSelector} from "react-redux";
-import {NavLink} from "react-router-dom";
+import {useDispatch, useSelector} from "../../node_modules/react-redux/lib";
+import {NavLink} from "../../node_modules/react-router-dom";
 function NewsFeedItem({item}){
     let {title, description, images, createByUser, date,like, id, commment, dislike} = item;
     // const [commentList, setCommentList] = useState(item.commment);

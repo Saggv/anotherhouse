@@ -1,4 +1,4 @@
-import {takeLatest, takeEvery} from "redux-saga/effects";
+import {takeLatest, takeEvery} from "../../node_modules/redux-saga/effects";
 import * as Action from "../Action/type";
 import {WatchLogin, WatchSignUp, WatchGetUser, WatchFetchNotification, WatchSeenNotification,
      WatchFetchNewsfeedUserNow,WatchFetchAnotherProfile, WatchFetchSeenMessage,

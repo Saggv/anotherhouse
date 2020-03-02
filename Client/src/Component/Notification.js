@@ -1,7 +1,7 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookMessenger} from '@fortawesome/free-brands-svg-icons';
-import {faBell,faLocationArrow, faPhone} from '@fortawesome/free-solid-svg-icons';
+import React from "../../node_modules/@types/react";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faFacebookMessenger} from '../../node_modules/@fortawesome/free-brands-svg-icons';
+import {faBell,faLocationArrow, faPhone} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 import user from "../Images/lisa.jpg";
 
 function Notification(){

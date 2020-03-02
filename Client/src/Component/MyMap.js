@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState} from "../../node_modules/@types/react";
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from "react-google-maps";
 
 function Map(){

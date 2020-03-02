@@ -1,11 +1,11 @@
-import React, {useEffect} from "react";
+import React, {useEffect} from "../../node_modules/@types/react";
 import Pagination from "./Pagination";
 import MotelRoom from "./MotelRoom";
-import {Switch, NavLink, Route, useRouteMatch,useLocation} from "react-router-dom";
+import {Switch, NavLink, Route, useRouteMatch,useLocation} from "../../node_modules/react-router-dom";
 import HotelRoom from "./HotelRoom";
 import HouseRoom from "./HouseRoom";
 import {FetchRoomHotel} from "../Action/Room";
-import {useDispatch } from "react-redux";
+import {useDispatch } from "../../node_modules/react-redux/lib";
 function Contentroom(){
     const {path} = useRouteMatch();
     const dispatch = useDispatch();

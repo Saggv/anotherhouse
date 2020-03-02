@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
+import React, {useEffect} from "../../node_modules/@types/react";
 import NewsHeader from "../Component/NewsHeader";
 import NewsFeedItem from "../Component/NewsFeedItem";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector} from "../../node_modules/react-redux/lib";
 import {FetchNewsfeed} from "../Action/Newsfeed"
 function NewsFeed(){
     const dispatch = useDispatch();

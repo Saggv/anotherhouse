@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, {useState} from "../../node_modules/@types/react";
 import feather from "../Images/feather.svg";
 import featherfocus from "../Images/featherfocus.svg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faSearch} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import {faSearch} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 import { PostNewsfeedSuccess} from "../Action/Newsfeed";
-import {useSelector, useDispatch} from "react-redux";
-import axios from "axios";
+import {useSelector, useDispatch} from "../../node_modules/react-redux/lib";
+import axios from "../../node_modules/axios";
 function NewsHeader(){
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");

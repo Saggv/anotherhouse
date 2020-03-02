@@ -1,17 +1,17 @@
-import React, {useState, useEffect, Fragment} from "react";
-import axios from "axios";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook,faInstagram, faFacebookMessenger} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope, faQuoteRight, faQuoteLeft, faCamera, faEdit, faCheckCircle} from '@fortawesome/free-solid-svg-icons';
+import React, {useState, useEffect, Fragment} from "../../node_modules/@types/react";
+import axios from "../../node_modules/axios";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import { faFacebook,faInstagram, faFacebookMessenger} from '../../node_modules/@fortawesome/free-brands-svg-icons';
+import {faEnvelope, faQuoteRight, faQuoteLeft, faCamera, faEdit, faCheckCircle} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 import Like from "../Images/Like.svg";
 import NLike from "../Images/NLike.svg";
 import UnLike from "../Images/UnLike.svg";
 import NUnLike from "../Images/NUnLike.svg";
 import {OpenMessageItem} from "../Action/MessageSocket";
 import {CreateRoomChat} from "./ItemMessage";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch, useSelector} from "../../node_modules/react-redux/lib";
 import { GetUser, VoteProfileUser,DownProfileUser,UpdateProfileUser,Logout} from "../Action/User";
-import {Redirect} from "react-router-dom";
+import {Redirect} from "../../node_modules/react-router-dom";
 function ProfileUser({dataUser}){
     const dispatch =useDispatch();
     const {username, avatar,id, vote, quote, down, name} = dataUser;

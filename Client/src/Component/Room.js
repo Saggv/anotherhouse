@@ -1,8 +1,8 @@
-import React from "react";
+import React from "../../node_modules/@types/react";
 
-import {Link} from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faMale, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons';
+import {Link} from "../../node_modules/react-router-dom";
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import {faMale, faMapMarkerAlt} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 function Room({data}){
       const {address, images, price, description, typeOfRoom, id} = data;
     return(

@@ -1,11 +1,11 @@
-import React from "react";
+import React from "../../node_modules/@types/react";
 import ProfileUser from "../Component/ProfileUser";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBell, faHome, faThList} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '../../node_modules/@fortawesome/react-fontawesome';
+import {faBell, faHome, faThList} from '../../node_modules/@fortawesome/free-solid-svg-icons';
 import Notification from "../Component/Notification";
 import ListProfile from "../Component/ListProfile";
-import {Switch, Route,NavLink,useRouteMatch} from "react-router-dom";
-import {useSelector} from "react-redux";
+import {Switch, Route,NavLink,useRouteMatch} from "../../node_modules/react-router-dom";
+import {useSelector} from "../../node_modules/react-redux/lib";
 import NewsfeedProfile from "../Component/NewsfeedProfile";
 function Profile(){
    const {path} = useRouteMatch();

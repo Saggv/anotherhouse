@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, {Fragment} from "../../node_modules/@types/react";
 import CTA from "../Component/CTA";
 import Search from "../Component/Search";
 import Contentroom from "../Component/Contentroom";
