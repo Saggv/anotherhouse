@@ -1,0 +1,89 @@
+.btn{
+    outline: none;
+    text-align: center;
+    border: none;
+    &__primary{
+         font-size: 1.5rem;
+         font-weight: 600;
+         width: 20rem;
+         text-align: center;
+         padding: 1rem 0;
+         background: $black--3;
+         color: $white;
+         text-transform: uppercase;
+         cursor: pointer;
+    }
+    &__icon{
+        font-size: 2rem;
+    }
+    &__right{
+        align-self: flex-end;
+        background: $primary;
+        @include respond(tab-lands){
+            align-self: flex-start;
+            @include flexbox();
+        }
+        @include respond(phone2){
+            margin-top: 1rem;
+            padding: 0.8rem;
+        }
+    }
+    &__blue{
+        background: $blue--5;
+        &--1{
+            background: $primary;
+        }
+    }
+    &__submit{
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 20rem;
+        text-align: center;
+        padding: 1rem 0;
+        background: $primary;
+        color: $white;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    &-submit{
+        text-align: center;
+        padding: .5rem 6rem;
+        background: $primary;
+        color: #FFF;
+        /* text-transform: uppercase; */
+        font-size: 1.6rem;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    &__sendcomment{
+        text-align: center;
+        padding: .5rem 1rem;
+        background: $primary;
+        color: #FFF;
+        /* text-transform: uppercase; */
+        font-size: 1.3rem;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}
+.btn-a{
+    text-decoration: none;
+    border-radius: 3rem;
+    background: #fff;
+    &__primary{
+       padding: .7rem 3rem;
+       font-size: 1.8rem;
+       color: $black--3;
+       box-shadow: 0 0 9px rgba(0,0,0,0.5);
+       margin: 2rem;
+
+    }
+}
+.display-block{
+    display: block;
+}
+.btn__image{
+    border: none;
+}

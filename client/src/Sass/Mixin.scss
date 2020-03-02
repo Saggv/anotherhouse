@@ -1,0 +1,50 @@
+//DEVICES
+/*
+    GALAXY-S5:      360-460;
+    PIXEL-2:        411-731
+    PIXEL-2XL:      411-823
+    IPHONE-5:       320-568
+    IPHONE-6/7/8:   375-667
+    IHPNE-6/7/8++:  414-736
+    IHPONE-X:       375-812
+    IPAD:           768-1024
+    IPAD-PRO:       1024-1366;
+
+    320->360->375->411->->460->568->667->->->768->812->1024.
+    
+    0-375--------- phone1
+    375->500------ phone2
+    500->700------ phonetab
+    700->850------ tab-port
+    850->1024----- tab-lands
+    1024->1200---- tab-land2
+    1200->1800---- desktop
+    >1800--------- bigdesktop
+
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone1{
+        @media (max-width: 23.4375em){@content};
+    }
+    @if $breakpoint == phone2{
+        @media (max-width: 31.25em){@content};
+    }
+    @if $breakpoint == tab-port{
+        @media (max-width: 53.125em){@content};
+    }
+    @if $breakpoint == tab-lands{
+        @media (max-width: 64em){@content};
+    }
+    @if $breakpoint == tab-land2{
+        @media (max-width: 75em){@content};
+    }
+    @if $breakpoint == desktop{
+        @media (max-width: 112.5){@content};
+    }
+    @if $breakpoint == bigdesktop{
+        @media (min-width: 75em){@content};
+    }
+    @if $breakpoint == phonetab{
+        @media (max-width: 43.75em){@content};
+    }
+}

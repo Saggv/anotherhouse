@@ -1,0 +1,75 @@
+.listprofile__items{
+    width: 70%;
+    margin: 0 auto;
+    @include respond(tab-port){
+        width: 90%;
+    }
+    @include respond(phone2){
+        width: 98%;
+    }
+}
+.listprofile__item__list{
+    position: relative;
+    width: 60%;
+    left:50%;
+    transform: translateX(-50%);
+    @include respond(tab-land2){
+        width: 80%;
+    }
+    @include respond(phone2){
+        width: 100%;
+      }
+}
+.listprofile__book__item{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    @include respond(phonetab){
+        flex-direction: column;
+        align-items: center;
+    }
+    &__right{
+        margin-left: 2rem;
+    }
+    &__img{
+        & img{
+            width: 10rem;
+            height: 6rem;
+        }
+        & p{
+            font-size: 1rem;
+        }
+    }
+    &__detail{
+        display: flex;
+        flex-wrap: wrap;
+        &__item{
+            width: 50%;
+            & label{
+                font-size: 1.3rem;
+                display: inline-block;
+                width: 8rem;
+            }
+            & span{
+                font-size: 1.3rem;
+            }
+        }
+        &__note{
+            box-shadow: 0 0 9px rgba(0,0,0,0.1);
+            width: 85%;
+            margin-top: 1rem;
+            height: 5rem;
+            padding: 1rem;
+            position: relative;
+            left: 10%;
+            @include respond(phonetab){
+              left: 0;
+              width: 95%;
+            }
+            & p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.contentroom{
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    margin-top: 4rem;
+    padding-bottom: 3.5rem;
+    &__nav{
+        @include flexbox();
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        &__item{
+            @include respond(tab-port){
+                width: calc(100%/3);
+            }
+        }
+        & a{
+            display: inline-block;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: $primary;
+            text-transform: uppercase;
+            box-shadow: 0 -3px 6px rgba(0,0,0,0.2);
+            text-align: center;
+            padding: 1.5rem 3rem;
+            margin-right: 3px;
+            @include respond(tab-port){
+                width:100%;
+                padding: 1.5rem 0;
+            }
+        }
+    }
+    &__filter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        @include respond(tab-port){
+            &__btn{
+                display: none;
+            }
+        }
+        & select{
+            cursor: pointer;
+            border: none;
+            font-size: 1.8rem;
+            padding: 1rem 2rem;
+        }
+    }
+}
+.active-box{
+    background: $primary;
+}
+.actives{
+    color: white !important;
+    background: $primary !important;
+}

@@ -1,0 +1,106 @@
+.user-now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    &__img{
+        width: 4rem;
+        height: 4rem;
+        border: 2px solid #fff;
+        box-shadow: 0 0 10px #F3F3F3;
+        border-radius: 50%;
+        @include respond(tab-port){
+            display: none;
+         }
+        & img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    &__input{
+        display: flex;
+        @include respond(tab-port){
+           width: 100%;
+        }
+        & textarea{
+            font-size: 1.6rem;
+            box-shadow: 0 0 10px #f3f3f3;
+            border: none;
+            padding: 1rem 3rem;
+            width: 50rem;
+            height: 1.8rem;
+            margin-left: 1rem;
+            resize: none;
+            &::-webkit-input-placeholder {
+                color: $primary;
+                margin-top: 4rem;
+                width: 75%;
+             }
+            &:focus{
+                outline: none;
+            }
+            @include respond(tab-port){
+                width: 100%;
+                margin-left: 0;
+             }
+             @include respond(phone1){
+                padding: 1rem 1rem;
+             }
+        }
+    }
+}
+.user-comment{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    &__img{
+        flex:none;
+        width: 5rem;
+        height: 5rem;
+        border: 2px solid rgba($color: $primary, $alpha: .3);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        border-radius: 50%;
+        margin-right: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        @include respond(phone2){
+            width: 4rem;
+            height: 4rem;
+        }
+        & img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    &__content{
+        box-shadow: 0 0 15px #F3F3F3;
+        font-size: 1.6rem;
+        box-sizing: border-box;
+        color: $black--3;
+        border-radius: 1rem;
+        padding: 1rem;
+        @include respond(phone2){
+            font-size: 1.5rem;
+        }
+        & a{
+            font-weight: 600;
+            color: $primary;
+            text-decoration: none;
+        }
+        & p{
+            box-sizing: border-box;
+        }
+    }
+    &__box-content{
+        & span{
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    }
+}
