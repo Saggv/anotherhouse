@@ -1,0 +1,205 @@
+.profileuser{
+    &__box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+        & h3{
+            font-size: 2.5rem;
+            color: $black--3;
+            font-weight: 600;
+            @include respond(phone2){
+                font-size: 1.8rem;
+            }
+        }
+    }
+    &__info{
+        position: relative;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        padding-top: 1rem;
+        &__img{
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            border: 5px solid $white;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+            position: relative;
+            @include respond(tab-port){
+                width: 15rem;
+                height: 15rem;
+            }
+            @include respond(phone2){
+                width: 12rem;
+                height: 12rem;
+            }
+            & img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &__change-avatar{
+            font-size: 3rem;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $primary;
+            cursor: pointer;
+        }
+        &__icon{
+            position: absolute;
+            & span{
+                position: absolute;
+                bottom: 0;
+                font-size: 1.6rem;
+                color: $primary;
+                visibility: hidden;
+                transition: 1s;
+                @include respond(phonetab){
+                    display: none;
+                }
+            }
+            cursor: pointer;
+            &:hover span{
+                visibility:visible;
+            }
+            &--1{
+                top:50%;
+                right:0;
+                transform: translateY(-50%);
+            }
+            &--2{
+                top:50%;
+                left:0;
+                transform: translateY(-50%);
+            }
+            &--3{
+                bottom: 0;
+               left: 50%;
+                transform: translateX(-50%);
+            }
+            &--icon{
+                font-size: 2.5rem;
+                color: $primary;
+            }
+        }
+    }
+}
+.profileuser{
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    padding: 8rem 0;
+    @include respond(tab-port){
+        width: 90%;
+    }
+    @include respond(phone2){
+        width: 95%;
+    }
+    &__quote{
+        display: flex;
+        position: absolute;
+
+        &__icon{
+            font-size: 5rem;
+            color: rgba($color: $black--3, $alpha: .5);
+            @include respond(phone2){
+                font-size: 3rem;
+            }
+        }
+        & p{
+            font-size: 1.6rem;
+            color:$black--3;
+        }
+        &__left{
+            top:0;
+            left:0;
+            & p{
+                align-self: flex-end;
+            }
+        }
+        &__right{
+            bottom: 0;
+            right: 0;
+            @include respond(phone2){
+                bottom: 2rem;
+            }
+        }
+    }
+}
+
+/// Like
+.profileuser__like{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%);
+    & span{
+        font-size: 1.8rem;
+        color:$primary;
+    }
+}
+.profileuser__unlike{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    & span{
+        font-size: 1.8rem;
+        color:$primary;
+    }
+}
+.profileuser__mess{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    &__icon{
+        font-size: 3rem;
+        color:$primary;
+        cursor: pointer;
+    }
+    &__edit{
+        font-size: 2rem;
+        color: $primary;
+        margin: 0 2rem;
+        cursor: pointer;
+    }
+
+}
+#change-avatar{
+    display: none;
+}
+.no-post-profile{
+    font-size: 1.6rem;
+    color: $primary;
+    text-align: center;
+}
+
+// logout
+.logout{
+    display: flex;
+    justify-content: center;
+    &__btn{
+        border: 1px solid #2680EB;
+        padding: .5rem 2re;
+        color: #333333;
+        padding: .5rem 3rem;
+        margin-top: 1rem;
+        background: none;
+        color: #2680EB;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}

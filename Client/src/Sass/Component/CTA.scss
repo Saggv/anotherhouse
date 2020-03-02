@@ -1,0 +1,78 @@
+.cta{
+    display: flex;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    @include respond(tab-land2){
+        flex-direction: column-reverse;
+    }
+    &__left{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            text-transform: uppercase;
+            color: $primary;
+            font-size: 1.6rem;
+            margin-right: 1rem;
+            @include respond(tab-land2){
+                & button{
+                    display: none
+                }
+            }
+            @include respond(phonetab){
+               font-size: 1.4rem;
+            }
+            &__globe{
+                margin-top: 1.5rem;
+                @include respond(tab-land2){
+                    margin-top: 0;
+                }
+            }
+    }
+    &__right{
+        flex: 54%;
+        &__head{
+            display: flex;
+            justify-content: space-between;
+            @include respond(phone2){
+                flex-direction: column;
+            }
+        }
+        &__detail{
+            margin-top: 1.5rem;
+           & p{
+                font-size: 2rem;
+                text-align: justify;
+                color: $black--3;
+            }
+            & a{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: $primary;
+                margin-top: 1rem;
+                display: block;
+            }
+        }
+    }
+    &__title{
+        display: inline-block;
+        font-size: 4rem;
+        color: rgba(0,0,0,0.5);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        @include respond(tab-lands){
+            letter-spacing: 2px;
+            font-size: 3.5rem;
+            text-transform:unset;
+        }
+    }
+}
+
+.icon__globe{
+    font-size: 2rem;
+    margin-right: .5rem;
+    display: inline;
+    @include respond(phonetab){
+        font-size: 1.4rem;
+     }
+}

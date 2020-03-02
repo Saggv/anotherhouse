@@ -1,0 +1,110 @@
+.newsheader{
+    width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    margin-top: 3rem;
+    @include respond(tab-land2){
+        width: 80%;
+    }
+    @include respond(phonetab){
+        width: 100%;
+    }
+    &-box{
+        @include flexbox();
+        padding: 1rem;
+        @include respond(phone2){
+            flex-direction: column;
+        }
+        &__user{
+            flex: none;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            margin-right: 2rem;
+            @include respond(phone2){
+                height: 5rem;
+                width: 5rem;
+                border: 2px solid $primary;
+                position: absolute;
+                top:0;
+                z-index: 10;
+            }
+            & img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        &__input-box{
+            position: relative;
+            @include respond(tab-land2){
+                width: 80%;
+            }
+            @include respond(phonetab){
+                width: 100%;
+            }
+            & textarea{
+                width: 50rem;
+                height: 13rem;
+                border: none;
+                font-size: 2rem;
+                resize: none;
+                box-sizing: border-box;
+                padding: 1rem;
+                @include respond(tab-land2){
+                    width:100%;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: 0 0 15px #F3F3F3;
+                }
+                &:focus ~ .feather{
+                    transform: translateX(-50%);
+                    width: 3rem;
+                    height: 3.1rem;
+                    left:3%;
+                }
+                &:focus ~ .feather--2{
+                    display: block;
+                    transition: 2s;
+                }
+            }
+        }
+        &__post{
+            &__input{
+                display: block;
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: .7rem;
+                font-size: 1.8rem;
+                box-sizing: border-box;
+            }
+        }
+        &__privew{
+            display: flex;
+            & img{
+                width: 6rem;
+                height: 5rem;
+            }
+        }
+    }
+}
+.feather{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    width: 12rem;
+    height: 12.1rem;
+    transition: 1S;
+    @include respond(tab-land2){
+        width: 6rem;
+        height: 6.1rem;
+    }
+    &--2{
+        display: none;
+        transition: 2S;
+    }
+}

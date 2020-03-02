@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>demo socket</title>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <h1>hello wdorld</h1>
+        <form>
+            <input type="text" placeholder="User send id" id="idSend" />
+            <input type="text" placeholder="User recieve id" id="iRecieve" />
+            <button type="button" id="btn">Submit</button>
+            <input type="text" placeholder="Content message " id="content" />
+            <button type="button" id="send">Send</button>
+        </form>
+        <script>
+            var socket = io();
+            let userS = document.querySelector("#idSend");
+            let userR = document.querySelector("#iRecieve");
+            let submit = document.querySelector("#btn");
+            let send = document.querySelector("#send");
+            let messag = document.querySelector("#content");
+            submit.addEventListener('click',()=>{
+                let userSendId = userS.value;
+                let userReciveId = userR.value
+                socket.emit("create-room", {userReciveId, userSendId});
+            })
+            send.addEventListener('click',()=>{
+                let contentMessage = messag.value;
+                let Sender = userS.value;
+                let Reciever = userR.value;
+                socket.emit("user-send",{contentMessage, Sender, Reciever});
+            })
+           socket.on("hello",(data)=>{
+               console.log(data);
+           })
+            // socket.on("you mess",(data)=>{
+            //      h.innerHTML= data.message;
+            // })
+            // submitRoom.addEventListener('click',()=>{
+            //     let idRoom = idRoo.value;
+            //      socket.emit("create-room", idRoom);
+            // })
+            // submit.addEventListener("click",()=>{
+            //     let userSend = name.value;
+            //     let message = inputText.value;
+            //     let idUser = "AD";
+            //     socket.emit("user-chat", {userSend, message, idUser})
+            // })
+            // socket.on("server-chat", data=>{
+            //     console.log(data);
+            //         h.append("<h1>"+data.userSend+" noi dung: "+data.message+"</h1>")
+            // })
+       </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+.search__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.search{
+    outline: none;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    width: 40%;
+    font-size: 1.8rem;
+    color: rgba(0,0,0,0.7);
+    @include respond(phone2){
+        font-size: 1.5rem;
+     }
+    &::-webkit-input-placeholder {
+       color: rgba(0,0,0,0.6);
+       color:rgba($color: $primary, $alpha: .7)
+    }
+    @include respond(tab-land2){
+        width: 60%;
+    }
+    @include respond(phonetab){
+        width: 90%;
+        margin-left: -4rem;
+    }
+    &__newsfeed{
+        box-shadow: 0px 15px 10px -15px rgba(17, 17, 17, 0.493);
+        border-radius: 0;
+    }
+}
+.icon__search{
+    font-size: 2.5rem;
+    color: rgba(0,0,0,0.6);
+    margin-left: -6rem;
+    cursor: pointer;
+}
+.search:focus ~.icon__search{
+    color: $primary;
+}

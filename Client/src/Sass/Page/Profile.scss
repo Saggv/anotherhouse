@@ -1,0 +1,32 @@
+.profileuser__area{
+    width: 100%;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+// NAV
+.profilecontent{
+    &__nav{
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        padding: 1rem 0;
+        text-align: center;
+        & a{
+            text-decoration: none;
+            margin: 0 2rem;
+            color:rgba(0,0,0,.3);
+            font-size: 2.5rem;
+        }
+        
+    }
+    &__display{
+        & h3{
+            font-size: 2rem;
+            color: $primary;
+            margin: 3rem 0;
+            font-weight: 600;
+        }
+    }
+}
+.selected{
+    color:$primary !important;
+}

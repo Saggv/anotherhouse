@@ -1,0 +1,97 @@
+.navigation{
+    box-shadow: 0 2px 4px rgba(0,0,0, 0.3);
+    position: sticky;
+    width: 100%;
+    top:0;
+    z-index: 500;
+    @include respond(phone2){
+       background: white;
+    }
+}
+.Nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    height: 6rem;
+    @include respond(phone2){
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    &__logo{
+        order: 0;
+        order: 0;
+       @include flexbox;
+       @include respond(phone2){
+        display: none;
+      }
+       & a{
+           font-size: 2rem;
+           color: $primary;
+           text-decoration: none;
+           font-weight: 500;
+       }
+    }
+    &__mid{
+        @include flexbox;
+        & a{
+            text-decoration: none;
+            color: $black--3;
+        }
+        @include respond(phone2){
+          display: none;
+        }
+    }
+    &__list{
+        order: 1;
+        flex:0 0 20%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & a{
+            color: $primary;
+            font-size: 2rem;
+        }
+    }
+    &__item{
+        position: relative;
+        &__img{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: 2px solid $primary;
+            display:inline-block;
+            & img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.active-newsfeed{
+    color: $primary !important;
+}
+.icon-newsfeed{
+    display: none;
+    @include respond(phone2){
+        display: inline;
+    }
+}
+.icon-red{
+    position: absolute;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    background: red;
+    border-radius: 50%;
+    color: white;
+    right: -.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    top: -1rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}

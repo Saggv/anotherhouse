@@ -1,0 +1,11 @@
+import axios from "axios";
+
+export const CallAPI=async(query={},token)=>{
+   const result = await axios.post("/graphql",JSON.stringify(query),{
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization": token
+            }
+     });
+     return result;
+}
