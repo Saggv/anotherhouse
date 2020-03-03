@@ -1,6 +1,6 @@
 import io from "socket.io-client";
 import * as Action from "./type";
-let socket = io("http://localhost:7000");
+let socket = io("https://asangvivi.herokuapp.com/");
 
 export const SendMessageSocket=(data)=>{
     socket.emit("user-send",data);
