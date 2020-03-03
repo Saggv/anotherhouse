@@ -17,21 +17,19 @@ function Profile(){
             </div>
             <div className="profilecontent__area">
                 <div className="profilecontent__nav">
-                    <NavLink to={`${path}/notification`} activeClassName="selected">
+                    <NavLink to="#" activeClassName="selected">
                         <FontAwesomeIcon icon={faBell} className="profilecontent__nav__icon"></FontAwesomeIcon>
                     </NavLink>
                     <NavLink to={`${path}`} exact activeClassName="selected">
                         <FontAwesomeIcon icon={faHome} className="profilecontent__nav__icon"></FontAwesomeIcon>
                     </NavLink>
-                    <NavLink to={`${path}/list`} activeClassName="selected">
+                    <NavLink to="#" activeClassName="selected">
                         <FontAwesomeIcon icon={faThList} className="profilecontent__nav__icon"></FontAwesomeIcon>
                     </NavLink>
                 </div>
                 <div className="profilecontent__display">
                     <h3>Recent activities</h3>
                         <Switch>
-                            <Route path={`${path}/notification`} component={Notification}></Route>
-                            <Route path={`${path}/list`} component={ListProfile}></Route>
                             <Route path={`${path}`} exact component={NewsfeedProfile}></Route>
                          </Switch>
                 </div>
@@ -40,3 +38,6 @@ function Profile(){
     );
 }
 export default Profile;
+
+// <Route path={`${path}/notification`} component={Notification}></Route>  {`${path}/list`} 
+// <Route path={`${path}/list`} component={ListProfile}></Route>   {`${path}/notification`}
