@@ -22,11 +22,12 @@ function Navigation(){
     const {notificationMessage} = user;
     useEffect(()=>{ 
         if(token){
-            const interval = setInterval(() => {
-                dispatch(FetchNotification());
-                dispatch(GetUser());
-             }, 1000);
-              return () => clearInterval(interval);
+            // const interval = setInterval(() => {
+            
+            //  }, 1000);
+            //   return () => clearInterval(interval);
+              dispatch(FetchNotification());
+              dispatch(GetUser());
         }
     },[dispatch, token]);
     const toggleMessage=()=>{
@@ -93,7 +94,7 @@ function Navigation(){
                             {/* <NavLink to="/room">
                                 <img src={Logo} alt="Logo for website"></img>
                             </NavLink> */}
-                            <NavLink to="#">
+                            <NavLink to="/room">
                                 Sagvv
                             </NavLink>
                         </div>

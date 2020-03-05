@@ -6,7 +6,8 @@ const initialState={
       Error:null,
       idRoom:null,
       dataDetailRoom:{},
-      photoRoom:[]
+      photoRoom:[],
+      skipRoom: 0
 }
 const RoomHotel = (state = initialState, action)=>{
     switch(action.type){
@@ -35,6 +36,16 @@ const RoomHotel = (state = initialState, action)=>{
                 ...state,
                 dataDetailRoom: action.payload.FetchDetailRoom,
                 photoRoom: action.payload.FetchDetailRoom.images
+            }
+        case Action.FETCH__ANOTHER__ROOM:
+            return{
+                ...state,
+                skipRoom: action.payload
+            }
+        case Action.FETCH__ANOTHER__ROOM__SUCCESS:
+            return{
+                ...state,
+                RoomData: action.payload.FetchAnotherRoom
             }
         default:
             return state

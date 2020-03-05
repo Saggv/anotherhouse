@@ -58,7 +58,7 @@ module.exports = buildSchema(`
         id:ID,
         description: String,
         address: String,
-        createBy: ID,
+        createBy: User,
         roomFor: Int,
         price: Int,
         images:[String],
@@ -121,6 +121,9 @@ module.exports = buildSchema(`
     input inputDetailRoom{
         idRoom: ID
     }
+    input inputFetchAnotheroom{
+        skip: Int
+    }
     type RootMutation{
         SayHello(data:String): String,
         SignUp(inputSignUp: inputSignUp):User,
@@ -139,7 +142,9 @@ module.exports = buildSchema(`
         UpdateUserProfile(inputUpdateProfile:inputUpdateProfile):User,
         PostRoomHotel(inputPostRoomHotel: inputPostRoomHotel): RoomHotel,
         FetchRoomHotel(inputFetchRoomHotel:inputFetchRoomHotel):[RoomHotel],
-        FetchDetailRoom(inputDetailRoom: inputDetailRoom):RoomHotel
+        FetchDetailRoom(inputDetailRoom: inputDetailRoom):RoomHotel,
+        FetchAnotherRoom(inputFetchAnotheroom: inputFetchAnotheroom): [RoomHotel],
+        UpadeteData(user:ID): String
     }
     schema {
         query: RootQuery,

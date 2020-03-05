@@ -7,18 +7,39 @@ import MyMap from "../Component/MyMap";
 import Pagination from "../Component/Pagination";
 import Footer from "../Component/Footer";
 import {useDispatch, useSelector} from "react-redux";
-import {FetchDetailRoom} from "../Action/Room";
+import {FetchDetailRoom, FetchAnotherRoom} from "../Action/Room";
+import {OpenMessageItem} from "../Action/MessageSocket";
+import {CreateRoomChat} from "../Component/ItemMessage";
+import Room from "../Component/Room";
 function Detailroom(){
-    const {dataDetailRoom} = useSelector(state=>state.Room);
-    const {images,description, price, address} = dataDetailRoom;
+    const {dataDetailRoom, RoomData} = useSelector(state=>state.Room);
+    const {user} = useSelector(state=>state.User);
+    const {images,description, price, address, createBy} = dataDetailRoom;
     const {params} = useRouteMatch();
     const dispatch = useDispatch();
     const [photo, setPhoto] = useState([]);
     useEffect(()=>{
         dispatch(FetchDetailRoom(params.id));
-        setPhoto(images);
-    },[dataDetailRoom, dispatch, images, params.id]);
+        dispatch(FetchAnotherRoom(0));
+      //  setPhoto(images);
+    },[]);//dataDetailRoom, dispatch, images, params.id
     const keyApi = "AIzaSyBpF1EsqwxHEnyOXuscYq8ivRivfiVUZzU";
+    const data={
+        userSendId:null,
+        userReciveId:null
+    }
+    const ClickChat=()=>{
+        if(!user.hasOwnProperty('id')){
+            return alert("Login please!")
+        }
+        data.userSendId= user.id;
+        data.userReciveId = createBy.id;
+        const {id, avatar} = createBy;
+        dispatch(OpenMessageItem({id, avatar}));
+        CreateRoomChat({data})
+        console.log(data);
+    }
+
     return(
         <Fragment>
             <div className="container">
@@ -38,7 +59,7 @@ function Detailroom(){
                         <div className="detailroom__img">
                             <div className="detailroom__img__box">
                                 {
-                                    photo ? (photo.map((item, index)=>{
+                                    images ? (images.map((item, index)=>{
                                         return(
                                             <div className={`detailroom__img__box__${index+1}`} key={index}>
                                                 <img src={item} className="img-detail" alt="box imgs" />
@@ -49,7 +70,7 @@ function Detailroom(){
                             </div>
                             <FontAwesomeIcon icon={faChevronCircleLeft} className="icon-slide"></FontAwesomeIcon>
                             <div className="detail__action">
-                                <button className="btn btn__primary btn__blue mr-2">
+                                <button className="btn btn__primary btn__blue mr-2" onClick={()=>ClickChat()}>
                                     <FontAwesomeIcon className="btn__icon" icon={faFacebookMessenger}></FontAwesomeIcon> Chat
                                 </button>
                                 <button className="btn btn__primary btn__blue--1">
@@ -76,13 +97,13 @@ function Detailroom(){
                     </div>
                     <div className="mayyoulike">
                         <h3>Có thể bạn quan tâm</h3>
-                        {/* <div className="row">
+                        <div className="row">
                             {
-                                arr.map(item=>(
-                                    <Room key={item}></Room>
+                               RoomData.map((item, index)=>(
+                                    <Room key={index} data={item}></Room>
                                 ))
                             }
-                        </div> */}
+                        </div>
                         <Pagination></Pagination>
                     </div>
                 </div>

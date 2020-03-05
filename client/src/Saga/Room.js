@@ -41,7 +41,13 @@ export function*WatchFetchDetailRoom(){
                 roomFor,
                 images,
                 price,
-                description
+                description,
+                createBy{
+                  id,
+                  avatar,
+                  username,
+                  name
+                }
             }
             }
     `
@@ -54,5 +60,39 @@ export function*WatchFetchDetailRoom(){
   }
   else{
       yield put(ActionRoom.FetchDetailRoomFail(data.errors[0]));
+  }
+}
+
+export function* WathcFetchAnotherRoom(){
+  const {skipRoom} = yield select(state=>state.Room);
+  const queryRoom ={
+    query:`
+    mutation{
+        FetchAnotherRoom(inputFetchAnotheroom:{skip:${skipRoom}}){
+            id,
+            typeOfRoom,
+            address,
+            roomFor,
+            images,
+            price,
+            description,
+            createBy{
+              id,
+              avatar,
+              username,
+              name
+            }
+        }
+      }
+    `
+  }
+  const result = yield call(CallAPI, queryRoom);
+  const {data} = result;
+  if(!data.errors){
+      let {data} = result.data
+      yield put(ActionRoom.FetchAnotherRoomSuccess(data));
+  }
+  else{
+      yield put(ActionRoom.FetchAnotherRoomFail(data.errors[0]));
   }
 }

@@ -25,3 +25,17 @@ export const FetchDetailRoomFail = payload=>({
     type: Action.FETCH__DETAIL__ROOM__FAIL,
     payload
 })
+
+// FETCH OTHER ROOM
+export const FetchAnotherRoom = (payload)=>({
+    type:Action.FETCH__ANOTHER__ROOM,
+    payload
+});
+export const FetchAnotherRoomSuccess = (payload)=>({
+    type:Action.FETCH__ANOTHER__ROOM__SUCCESS,
+    payload
+})
+export const FetchAnotherRoomFail = (payload)=>({
+    type:Action.FETCH__ANOTHER__ROOM__FAIL,
+    payload
+})

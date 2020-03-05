@@ -17,5 +17,16 @@ module.exports={
         const {idRoom} = args.inputDetailRoom;
         const result = await RoomHotelModel.findById({_id: idRoom}).populate('createBy');
         return result;
+    },
+    FetchAnotherRoom: async(args)=>{
+        const {skip} = args.inputFetchAnotheroom;
+        const result = await RoomHotelModel.find().skip(skip).limit(8).populate('createBy');
+        return result;        
+    },
+    UpadeteData: async(args)=>{
+        const result = await RoomHotelModel.find({address: "Ha Noi, Viet Nam"}).updateMany({$set:{"createBy":"5e5012f51141432e045c13ff"}});
+        return "Sdfsfa";
     }
+
 }
+//  const result = await RoomHotelModel.find({address: "Ha Noi, Viet Nam"}).Update({$set:{"createBy":"5e5012f51141432e045c13ff"}})

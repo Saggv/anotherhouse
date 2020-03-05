@@ -6,10 +6,11 @@ import {FetchNewsfeed} from "../Action/Newsfeed"
 function NewsFeed(){
     const dispatch = useDispatch();
     useEffect(()=>{
-        const interval = setInterval(() => {
-           dispatch(FetchNewsfeed());
-         }, 1000);
-         return () => clearInterval(interval);
+        // const interval = setInterval(() => {
+        //    
+        //  }, 1000);
+        //  return () => clearInterval(interval);
+        dispatch(FetchNewsfeed());
     },[dispatch]);
     const {Newsfeed} = useSelector(state=> state.Newsfeed);
     return(

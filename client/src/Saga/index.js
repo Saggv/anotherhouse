@@ -7,7 +7,7 @@ import {WatchLogin, WatchSignUp, WatchGetUser, WatchFetchNotification, WatchSeen
 import {WatchFetchNewsfeed, WatchFetchAnotherNewsfeed, WatchLikeNewsfeed, WatchPostNewsfeedComment,
      WatchPostNewsfeed,WatchDislikeNewsfeed} from "./Newsfeed";
 import {WatchFetchMyMessage} from "./Message";
-import {WatchFetchRoom,WatchFetchDetailRoom} from "./Room";
+import {WatchFetchRoom,WatchFetchDetailRoom, WathcFetchAnotherRoom} from "./Room";
 function* Hello(){
     yield console.log("hello");
     return 0;
@@ -36,6 +36,7 @@ function* rootSaga(){
     yield takeEvery(Action.INCREASE__NOTIFICATION__MESSAGE, WatchGetUser);
     yield takeEvery(Action.FETCH__ROOM__HOTEL, WatchFetchRoom);
     yield takeEvery(Action.FETCH__DETAIL__ROOM, WatchFetchDetailRoom);
+    yield takeEvery(Action.FETCH__ANOTHER__ROOM, WathcFetchAnotherRoom);
 };
 
 export default rootSaga;
