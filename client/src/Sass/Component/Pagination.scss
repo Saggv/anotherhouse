@@ -1,24 +1,24 @@
-.pagination{
-    margin:3.5rem 0;
-    font-size: 1.8rem;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    &__item{
-        background: $white;
-        border-radius: 50%;
-        height: 4rem;
-        width: 4rem;
-        @include flexbox();
-        box-shadow: 0 0 9px rgba(0,0,0,0.5);
-        cursor: pointer;
-        margin:0 1rem;
-        & a{
-            text-decoration: none;
-            color: $black--3;
-        }
+.pagination {
+  margin: 3.5rem 0;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  &__item {
+    background: $white;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    @include flexbox();
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin: 0 1rem;
+    & a {
+      text-decoration: none;
+      color: $black--3;
     }
-    &__icon{
-        font-size: 2.5rem;
-    }
+  }
+  &__icon {
+    font-size: 2.5rem;
+  }
 }
