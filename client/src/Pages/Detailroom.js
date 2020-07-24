@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import { Link, useRouteMatch, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
-import { faChevronCircleLeft, faCheckCircle, faMale } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faMale } from '@fortawesome/free-solid-svg-icons';
 import MyMap from '../Component/MyMap';
 import Pagination from '../Component/Pagination';
 import Footer from '../Component/Footer';
@@ -51,9 +51,6 @@ function Detailroom() {
               </Link>
             </li>
             <li className="url__item">
-              <Link to="#">Khách sạn</Link>
-            </li>
-            <li className="url__item">
               <Link to="#">Chi tiết</Link>
             </li>
           </ul>
@@ -70,7 +67,6 @@ function Detailroom() {
                     })
                   : null}
               </div>
-              <FontAwesomeIcon icon={faChevronCircleLeft} className="icon-slide"></FontAwesomeIcon>
               <div className="detail__action">
                 <button className="btn btn__primary btn__blue mr-2" onClick={() => ClickChat()}>
                   <FontAwesomeIcon className="btn__icon" icon={faFacebookMessenger}></FontAwesomeIcon> Chat

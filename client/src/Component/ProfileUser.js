@@ -118,13 +118,6 @@ function ProfileUser({dataUser}){
                 </div>
             </div>
             <div className="profileuser__quote profileuser__quote__right">
-                    {/* {
-                        quote ? (
-                            <p className="ml-2">{quote}</p>
-                        ):(
-                            <p className="ml-2">Hello, say something about you</p>
-                        )
-                    } */}
                 <FontAwesomeIcon className="profileuser__quote__icon" icon={faQuoteRight} />
             </div>
             <div className="profileuser__like">

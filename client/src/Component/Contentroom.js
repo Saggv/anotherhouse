@@ -32,31 +32,6 @@ function Contentroom() {
           </NavLink>
         </div>
       </div>
-      <div className="contentroom__filter">
-        <select>
-          <option value="all">Toàn Quốc</option>
-          <option value="hanoi">Hà Nội</option>
-          <option value="danang">Đà Nắng</option>
-          <option value="tphcm">Tp.HCM</option>
-        </select>
-        {/* <div className="contentroom__filter__btn">
-          <NavLink to="#" className="btn-a btn-a__primary">
-            Căn hộ{' '}
-          </NavLink>
-          <NavLink to="#" className="btn-a btn-a__primary">
-            Nhà{' '}
-          </NavLink>
-          <NavLink to="#" className="btn-a btn-a__primary">
-            Mặt bằng{' '}
-          </NavLink>
-        </div> */}
-        <select>
-          <option value="volvo">Tất cả</option>
-          <option value="saab">Thấp</option>
-          <option value="mercedes">Trung Bình</option>
-          <option value="audi">Cao</option>
-        </select>
-      </div>
       <div className="contentroom__area">
         <Switch>
           <Route path={`${path}/motel`} component={MotelRoom}></Route>
